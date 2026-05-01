@@ -11,6 +11,24 @@
 - `sprint2_backlog_p1_zh.md`：P1 Sprint 2 待办与验收标准初稿。
 - `release_checklist_p1_zh.md`：P1 发布 Go/No-Go 检查清单。
 - `p1_metrics_event_dictionary_zh.md`：P1 指标与埋点字段字典。
+- `p1_day1_task_assignment_template_zh.md`：P1 Day-1 任务分配模板。
+- `p1_day1_task_assignment_filled_sample_zh.md`：P1 Day-1 任务分配示例（已预填）。
+- `p1_daily_standup_template_zh.md`：P1 每日站会模板（5分钟）。
+- `p1_weekly_review_template_zh.md`：P1 周复盘模板（指标+结论+动作项）。
+- `p1_risk_register_template_zh.md`：P1 风险跟踪表模板（含阈值与处置记录）。
+- `p1_execution_playbook_zh.md`：P1 执行手册（节奏、职责、门禁与升级机制）。
+- `p1_completion_tracker_zh.md`：P1 完成追踪表（Story/指标/周目标）。
+- `p1_kpi_dashboard_template_zh.md`：P1 指标看板模板（核心指标/漏斗/告警）。
+- `p1_launch_readiness_report_template_zh.md`：P1 上线就绪报告模板（Go/No-Go）。
+- `p1_handover_checklist_template_zh.md`：P1 交接清单模板（开发/测试/运营交接）。
+- `p1_decision_log_template_zh.md`：P1 决策日志模板（背景/方案/结论/复盘）。
+- `p1_done_definition_zh.md`：P1 完成定义（范围/质量/指标/交接）。
+- `p1_7day_execution_plan_zh.md`：P1 7天落地执行计划（按天可执行）。
+- `p1_daily_status_report_template_zh.md`：P1 每日状态报告模板（进展/指标/风险）。
+- `p1_weekly_risk_review_report_template_zh.md`：P1 周风险复盘报告模板。
+- `frontend_p1_handoff_zh.md`：P1 前端开发交接包（页面、状态、接口、验收）。
+- `frontend_sprint_taskboard_p1_zh.md`：P1 前端 Sprint 任务板（TODO/DOING/DONE）。
+- `frontend_definition_of_done_p1_zh.md`：前端 P1 完成定义（DoD）。
 - `scripts/validate_docs.py`：文档与 CSV 一键校验脚本（Windows 原生可运行）。
 - `VALIDATION.md`：校验矩阵与门禁说明。
 - `TROUBLESHOOTING.md`：常见报错与排障流程。
@@ -95,6 +113,19 @@ python -m pip install -e .
 python .\scripts\run_all_checks.py
 # 或 planning-validator full-check
 ```
+
+## 儿童学习 App 演示版（可点开可运行）
+```bash
+python app/server.py --host 127.0.0.1 --port 8080
+```
+浏览器打开：
+`http://127.0.0.1:8080`
+
+演示功能包含：
+- 学习 -> 即时测（3题）
+- 错题本入口与展示
+- 7天激励领取
+- 实时埋点日志展示
 
 ## 上传到 GitHub（Windows 11，逐行可复制）
 > 先在 GitHub 网页新建一个空仓库（例如：`planning-validator-project`），不要勾选初始化 README。
