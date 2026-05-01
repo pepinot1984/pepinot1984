@@ -3,7 +3,7 @@ repos:
     hooks:
       - id: validate-docs
         name: validate planning docs and CSV
-        entry: ./scripts/validate_docs.sh
+        entry: python scripts/validate_docs.py
         language: system
         pass_filenames: false
         stages: [pre-commit, pre-push]
