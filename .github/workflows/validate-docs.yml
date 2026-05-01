@@ -1,0 +1,66 @@
+name: Validate Planning Docs
+
+concurrency:
+  group: validate-docs-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+on:
+  push:
+    paths:
+      - 'README.md'
+      - 'CONTRIBUTING.md'
+      - 'six_month_language_app_plan_zh.md'
+      - 'jira_import_guide_zh.md'
+      - 'release_checklist_p0_zh.md'
+      - 'p0_jira_backlog_template.csv'
+      - 'scripts/validate_docs.py'
+      - 'scripts/selfcheck_validators.py'
+      - 'scripts/run_ci_checks.py'
+      - 'scripts/validate_backlog_csv.py'
+      - 'scripts/validate_doc_links.py'
+      - '.pre-commit-config.yaml'
+      - 'requirements-dev.txt'
+      - 'pyproject.toml'
+      - '.github/workflows/validate-docs.yml'
+  pull_request:
+    paths:
+      - 'README.md'
+      - 'CONTRIBUTING.md'
+      - 'six_month_language_app_plan_zh.md'
+      - 'jira_import_guide_zh.md'
+      - 'release_checklist_p0_zh.md'
+      - 'p0_jira_backlog_template.csv'
+      - 'scripts/validate_docs.py'
+      - 'scripts/selfcheck_validators.py'
+      - 'scripts/run_ci_checks.py'
+      - 'scripts/validate_backlog_csv.py'
+      - 'scripts/validate_doc_links.py'
+      - '.pre-commit-config.yaml'
+      - 'requirements-dev.txt'
+      - 'pyproject.toml'
+      - '.github/workflows/validate-docs.yml'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Run CSV validator
+        run: python scripts/validate_backlog_csv.py
+
+      - name: Run link validator
+        run: python scripts/validate_doc_links.py
+
+      - name: Run full check suite
+        run: python scripts/run_ci_checks.py
