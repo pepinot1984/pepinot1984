@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "planning-validator"
+version = "0.1.0"
+description = "Runnable validation toolchain for planning docs and backlog CSV"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+planning-validator = "planning_validator.cli:main"

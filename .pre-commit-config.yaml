@@ -1,0 +1,30 @@
+repos:
+  - repo: local
+    hooks:
+      - id: validate-docs
+        name: validate planning docs and CSV
+        entry: ./scripts/validate_docs.sh
+        language: system
+        pass_filenames: false
+        stages: [pre-commit, pre-push]
+
+      - id: validate-csv
+        name: validate backlog csv
+        entry: python scripts/validate_backlog_csv.py
+        language: system
+        pass_filenames: false
+        stages: [pre-push]
+
+      - id: validate-links
+        name: validate markdown local links
+        entry: python scripts/validate_doc_links.py
+        language: system
+        pass_filenames: false
+        stages: [pre-push]
+
+      - id: validate-workflow
+        name: validate workflow consistency
+        entry: python scripts/validate_workflow_consistency.py
+        language: system
+        pass_filenames: false
+        stages: [pre-push]
