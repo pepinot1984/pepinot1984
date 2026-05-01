@@ -1,0 +1,17 @@
+Issue Type,Summary,Description,Epic Name,Epic Link,Story Points,Priority,Labels,Acceptance Criteria,Original Estimate
+Epic,"Epic A: 课程与内容引擎","P0课程引擎与多媒体渲染能力",Epic A,,,,p0,learning-app,"课程播放链路可用；支持多媒体；支持灰度发布", 
+Story,"US-A1 微课播放框架","支持3-5分钟单元串联：热身听力→图像理解→句型操练→输出→奖励",,Epic A,5,Highest,"p0,course-engine","可配置课节流程；完成事件可追踪；异常可恢复",5d
+Story,"US-A2 多媒体素材渲染","同一题支持图片、音频、动画占位；弱网可降级",,Epic A,5,Highest,"p0,media","图片/音频可加载；弱网降级成功率>95%",6d
+Story,"US-A3 课程版本与灰度开关","按年级/班级切换课程包版本并可回滚",,Epic A,3,High,"p0,release","支持灰度比例配置；一键回滚；版本可审计",4d
+Epic,"Epic B: 高频词库与复习系统","1000高频词分级与SRS复习调度",Epic B,,,,p0,srs,"词库可检索；SRS可调度；掌握度可统计", 
+Story,"US-B1 1000高频词分级词库","词条含发音、例句、图片标签、主题标签",,Epic B,3,Highest,"p0,vocab","支持A1/A2难度标注；词条完整率>98%",4d
+Story,"US-B2 SRS复习调度","支持新学/复习队列、遗忘曲线间隔、错题回流",,Epic B,5,Highest,"p0,srs","复习任务按计划生成；错题回流生效；无丢题",6d
+Story,"US-B3 词汇掌握度统计","区分识别掌握与主动输出掌握，支持周趋势",,Epic B,2,High,"p0,analytics","看板展示双维掌握度；周趋势图可用",3d
+Epic,"Epic C: 基础练习流（听说读写）","听力理解、语音反馈和造句组合",Epic C,,,,p0,practice,"题型可用；反馈友好；语序基础校验可用", 
+Story,"US-C1 听力理解题型","支持看图选义、情景判断并记录正确率与反应时",,Epic C,3,Highest,"p0,listening","2种题型可配置；统计事件完整",4d
+Story,"US-C2 跟读与语音反馈v1","返回可懂度+节奏建议，鼓励型反馈",,Epic C,5,Highest,"p0,speech","可完成录音与反馈；反馈延迟<2s",7d
+Story,"US-C3 造句组合器v1","主语/动词/宾语/形容词拖拽成句并语序校验",,Epic C,3,High,"p0,grammar","拖拽交互稳定；语序校验准确率>95%",5d
+Epic,"Epic D: 家长端基础看板","周学习、词汇听力与预警提醒",Epic D,,,,p0,parent-dashboard,"家长端可查看核心指标并配置提醒", 
+Story,"US-D1 学习进度总览","展示周学习时长、完成单元、连续学习天数",,Epic D,2,High,"p0,parent","指标按日更新；异常缺失率<1%",3d
+Story,"US-D2 词汇与听力指标","展示新增词汇、复习命中率、听力理解率",,Epic D,2,High,"p0,parent,analytics","指标定义一致；可按周筛选",3d
+Story,"US-D3 预警与提醒","支持3天未学习/理解率下降提醒配置",,Epic D,2,Medium,"p0,notification","提醒规则可配置；消息送达率>98%",2d
